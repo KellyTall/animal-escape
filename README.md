@@ -1,1 +1,1 @@
-work for a friend maping animal escapes!
+work for a friend mapping ANIMAL ESCAPES using information from Trove!
