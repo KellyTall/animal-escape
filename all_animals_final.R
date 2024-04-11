@@ -4,15 +4,13 @@ library(tidyverse)
 
 all_animals <- rbind(elephant1, tiger1, lion1, leopard1)
 
-View(data)
 
-# foreign <- c("The South Australian Colonist and Settlers' Weekly Record of British, Foreign and Colonial Intelligence (London, England : 1840)",
-#              "The Tribune (Philippines : 1932 - 1945)",
-#              "Guinea Gold (Papua New Guinea : 1942 - 1945)")
+
 
 View(data)
+
 data <- all_animals |>
-  select(heading, abstract,title, spatial,animal) |>
+  relocate(heading, abstract,title, spatial,animal, date, date_fix) |>
   mutate(spatial = case_when(spatial == "New South Wales" ~ "NSW",
                              spatial == "South Australia" ~ "SA",
                              spatial == "Tasmania" ~ "TAS",
